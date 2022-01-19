@@ -1,35 +1,51 @@
 import { useDispatch } from 'react-redux';
 // import your Action Creators
 import { v4 as uuidv4 } from 'uuid';
+import { useState } from 'react';
 import { addBook } from '../redux/books/books';
 
 const AddBook = () => {
   const dispatch = useDispatch();
+
+  const defState = {
+    id: '',
+    title: '',
+    author: '',
+    genre: 'Action',
+  };
+  const [form, setForm] = useState(defState);
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   const submitBookToStore = () => {
-    const parent = document.getElementById('form-add');
     const newBook = {
       id: uuidv4(), // make sure it's unique
-      title: parent.title.value,
-      author: parent.author.value,
-      genre: parent.genre.value,
-      progress: 30,
+      title: form.title,
+      author: form.author,
+      genre: form.genre,
+      progress: 0,
     };
     dispatch(addBook(newBook));
+    setForm(defState);
   };
 
   return (
     <div>
       <form id="form-add">
-        <input type="text" name="title" placeholder="title" />
-        <input type="text" name="author" placeholder="author" />
+        <input type="text" name="title" placeholder="Title" onChange={handleChange} />
+        <input type="text" name="author" placeholder="Author" onChange={handleChange} />
         <label htmlFor="genre">Genre:</label> {/*eslint-disable-line*/}
-        <select id="genre" name="genre">
+        <select id="genre" name="genre" onChange={handleChange}>
           <option value="Action">Action</option>
           <option value="Science Fiction">Science Fiction</option>
           <option value="Economy">Economy</option>
           <option value="Horror">Horror</option>
         </select>
-        <button onClick={submitBookToStore} type="button">Add Book</button>
+        <button className="delete-book" onClick={submitBookToStore} type="button">Add Book</button>
       </form>
     </div>
   );

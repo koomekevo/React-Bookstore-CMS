@@ -1,4 +1,3 @@
-/* eslint-disable no-alert */
 import { useDispatch } from 'react-redux';
 import propTypes from 'prop-types';
 import { removeBook } from '../redux/books/books';
