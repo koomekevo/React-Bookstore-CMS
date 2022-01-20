@@ -7,7 +7,7 @@ The Bookstore is a website similar to the "Awesome Books" that allows you to:
 
 ## Live Demo
 
-koomekevo-react-bookstore-cms.netlify.app
+https://koomekevo-react-bookstore-cms.netlify.app
 
 ## Built With
 
