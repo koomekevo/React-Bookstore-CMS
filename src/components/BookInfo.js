@@ -1,29 +1,50 @@
 import { useDispatch } from 'react-redux';
 import propTypes from 'prop-types';
-import { removeBook } from '../redux/books/books';
+import { removeBook, modal } from '../redux/books/books';
+import ProgressBar from './ProgressBar';
 import error from './error';
 
 const BookInfo = (props) => {
   const { book } = props;
   const {
-    id, title, category,
+    id, title, category, progress,
   } = book[0];
   const dispatch = useDispatch();
   return (
     <div className="book-container">
-      <p className="book-genre">{category}</p>
-      <p className="book-title">{title}</p>
-      <button
-        className="delete-book"
-        type="button"
-        onClick={() => {
-          dispatch(removeBook(id));
-          error('Book removed', 'green');
-        }}
-      >
-        {' '}
-        Delete
-      </button>
+      <div className="book-fp">
+        <p className="book-genre">{category}</p>
+        <p className="book-title">{title}</p>
+        <div className="buttons">
+          <button
+            className="delete-book"
+            type="button"
+            onClick={() => {
+              dispatch(removeBook(id));
+              error('Book removed', 'green');
+            }}
+          >
+            {' '}
+            Delete
+          </button>
+          <button
+            className="delete-book"
+            type="button"
+            onClick={() => {
+              dispatch(modal({ display: false }, { book }));
+            }}
+          >
+            {' '}
+            Edit
+          </button>
+        </div>
+      </div>
+      <ProgressBar progress={progress} />
+      <div className="completion">
+        <h3 className="chapter-title">CURRENT CHAPTER</h3>
+        <p className="chapter-number">Chapter 1</p>
+        <button type="button" className="chapter-button">UPDATE PROGRESS</button>
+      </div>
     </div>
   );
 };
