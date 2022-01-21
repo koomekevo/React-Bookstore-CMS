@@ -6,7 +6,7 @@ import store from '../redux/store';
 const BookModal = (props) => {
   const book = useSelector((store) => store.reducerModal[1]);
   const {
-    title, author, genre,
+    title, author, genre, progress,
   } = book;
   return (
     <div id="modal">
@@ -17,6 +17,8 @@ const BookModal = (props) => {
         { author }
         <br />
         { genre }
+        <br />
+        { progress }
         {' '}
       </p>
     </div>

@@ -11,6 +11,7 @@ const AddBook = () => {
   const defState = {
     id: '',
     title: '',
+    author: '',
     genre: 'Action',
   };
   const [form, setForm] = useState(defState);
@@ -28,6 +29,7 @@ const AddBook = () => {
       const newBook = {
         id: uuidv4(), // make sure it's unique
         title: form.title,
+        author: form.author,
         category: form.genre,
       };
       error('Book added', 'green');
@@ -35,15 +37,17 @@ const AddBook = () => {
       setForm(defState);
       const parent = document.getElementById('form-add');
       parent.title.value = '';
+      parent.title.author = '';
       parent.genre.value = 'Action';
     }
   };
 
   return (
     <div className="form-add">
-      <h2 className="add-book">Add a book </h2>
+      <h2 className="add-book">ADD NEW BOOK</h2>
       <form id="form-add">
         <input type="text" name="title" placeholder="Title" onChange={handleChange} />
+
         <select defaultValue="DEFAULT" id="genre" name="genre" onChange={handleChange}>
           <option value="DEFAULT" disabled hidden>Category</option>
           <option value="Action">Action</option>

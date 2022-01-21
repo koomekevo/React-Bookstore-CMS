@@ -12,19 +12,42 @@
   align-items: center;
   padding-left: 30px;
   flex-wrap: wrap;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dbcdcd;
+}
+
+.Bookstore-CMS {
+  width: 15rem;
+  height: 2.313rem;
+  margin: auto;
+  margin-left: 20px;
+  margin-right: 60px;
+  justify-content: center;
+  align-items: center;
+  font-family: Montserrat;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
 }
 
 .navlist {
   display: flex;
   flex-flow: row;
-  justify-content: space-around;
   list-style-type: none;
   margin: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .navlist > li {
   margin-right: 30px;
-  font-size: 1.2em;
+  font-size: 0.8em;
+  font-family: Montserrat;
 }
 
 .navlist > li > a {
@@ -60,33 +83,61 @@
 }
 
 .book-genre {
+  width: 10.063rem;
+  height: 2.125rem;
+  margin: 0 2.438rem 0 0;
   opacity: 0.5;
-  font-family: Montserrat, sans-serif;
-  font-size: 1em;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
 }
 
 .book-title {
-  font-size: 1.2em;
-  font-weight: bold;
   margin-top: 10px;
+  font-family: RobotoSlab;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
 }
 
 .book-author {
-  font-family: RobotoSlab, sans-serif;
+  width: 5.813rem;
+  height: 1.188rem;
+  margin: 0.25rem 0.875rem 0 0;
+  font-family: RobotoSlab;
   font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
   color: #4386bf;
-  margin: 10px 0 10px 0;
 }
 
 .delete-book {
-  width: 50px;
+  width: 4.563rem;
+  height: 1.188rem;
+  margin: 0.188rem 0.938rem 0.125rem 0;
   text-align: left;
-  margin: auto;
-  margin-top: 5px;
   outline: none;
   border: none;
   cursor: pointer;
   background: none;
+  color: #4386bf;
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
   color: #4386bf;
 }
 
@@ -101,8 +152,17 @@ svg {
 }
 
 .add-book {
-  text-align: center;
-  margin: 20px auto 20px auto;
+  width: 13.875rem;
+  height: 1.5rem;
+  margin: 1.813rem 32.75rem 1.188rem 0;
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
 }
 
 .main-title {
@@ -115,18 +175,16 @@ svg {
 #form-add {
   display: flex;
   flex-flow: column;
-  justify-content: center;
-  padding: 0 30px 0 30px;
-  width: auto;
-  margin: auto;
+  float: left;
+  width: 100%;
+  margin-left: 0px;
 }
 
 #form-add > input {
   outline: none;
   border: 1px solid rgba(8, 33, 41, 0.205);
-  margin-bottom: 20px;
   height: 20px;
-  width: 60%;
+  margin-bottom: 20px;
 }
 
 .invisible {
@@ -193,12 +251,18 @@ svg {
 }
 
 .percentage {
-  font-weight: bolder;
-  font-size: 1.5em;
+  font-family: Montserrat;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
 }
 
 .percentage-text {
-  font-weight: lighter;
+  font-size: 1rem;
   color: rgba(58, 58, 58, 0.562);
   display: block;
   margin-left: 20px;
@@ -219,33 +283,65 @@ svg {
   border: none;
   height: 30px;
   width: 100px;
-  margin: 5px auto 10px auto;
+  margin: 0px auto 0px auto;
 }
 
 .chapter-title {
-  font-size: 1em;
-  color: rgba(80, 77, 77, 0.38);
-  margin-bottom: 10px;
+  width: 7.875rem;
+  height: 1.125rem;
+  margin: 0.063rem 3.625rem 0 3.688rem;
+  opacity: 0.5;
+  font-family: RobotoSlab;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
 }
 
 .chapter-number {
-  font-weight: lighter;
-  margin-bottom: 10px;
+  width: 4.688rem;
+  height: 1.313rem;
+  margin: 0.438rem 6.813rem 0.25rem 3.688rem;
+  font-family: RobotoSlab;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: var(--black-two);
 }
 
 .chapter-button {
+  width: 11.5rem;
+  height: 2.163rem;
+  margin: 0.75rem 0 0.563rem 3.688rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
   border-radius: 3px;
-  background: rgba(21, 181, 230, 0.767);
+  background-color: #0290ff;
+}
+
+.Update-progress {
+  width: 8.938rem;
+  height: 1.125rem;
+  font-family: RobotoSlab;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
   color: #fff;
-  outline: none;
-  border: none;
-  height: 30px;
-  margin-bottom: 10px;
 }
 
 .form-add {
   display: flex;
   flex-flow: column;
+  padding-left: 20px;
 }
 
 #form-add > input,
@@ -253,7 +349,8 @@ svg {
   border: 1px solid rgba(170, 170, 170, 0.38);
   height: 40px;
   margin-right: 20px;
-  width: 100%;
+  float: left;
+  width: 41.5rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -297,13 +394,13 @@ svg {
 
   #form-add {
     flex-flow: row;
-    width: 50%;
+    width: 100%;
   }
 
   .add-button {
-    height: 30px;
+    height: 40px;
     width: 130px;
-    margin: 5px auto 10px auto;
+    margin: 0px auto 0px auto;
   }
 
   #form-add > select {

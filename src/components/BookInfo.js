@@ -7,7 +7,7 @@ import error from './error';
 const BookInfo = (props) => {
   const { book } = props;
   const {
-    id, title, category, progress,
+    id, title, author, category, progress,
   } = book[0];
   const dispatch = useDispatch();
   return (
@@ -15,7 +15,9 @@ const BookInfo = (props) => {
       <div className="book-fp">
         <p className="book-genre">{category}</p>
         <p className="book-title">{title}</p>
+        <p className="book-author">{author}</p>
         <div className="buttons">
+          <button className="delete-book" type="button"> Comments </button>
           <button
             className="delete-book"
             type="button"
@@ -25,7 +27,7 @@ const BookInfo = (props) => {
             }}
           >
             {' '}
-            Delete
+            Remove
           </button>
           <button
             className="delete-book"
@@ -43,7 +45,9 @@ const BookInfo = (props) => {
       <div className="completion">
         <h3 className="chapter-title">CURRENT CHAPTER</h3>
         <p className="chapter-number">Chapter 1</p>
-        <button type="button" className="chapter-button">UPDATE PROGRESS</button>
+        <button type="button" className="chapter-button">
+          <span className="Update-progress">UPDATE PROGRESS</span>
+        </button>
       </div>
     </div>
   );

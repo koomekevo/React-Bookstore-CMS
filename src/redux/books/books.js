@@ -52,6 +52,7 @@ export const addBook = (payload) => async (dispatch) => {
       body: JSON.stringify({
         item_id: payload.id,
         title: payload.title,
+        author: payload.author,
         category: payload.category,
       }),
       headers: {
