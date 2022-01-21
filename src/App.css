@@ -25,7 +25,7 @@
   margin-right: 60px;
   justify-content: center;
   align-items: center;
-  font-family: Montserrat;
+  font-family: Montserrat; /* stylelint-disable-line */
   font-size: 1.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -47,7 +47,7 @@
 .navlist > li {
   margin-right: 30px;
   font-size: 0.8em;
-  font-family: Montserrat;
+  font-family: Montserrat; /* stylelint-disable-line */
 }
 
 .navlist > li > a {
@@ -87,7 +87,7 @@
   height: 2.125rem;
   margin: 0 2.438rem 0 0;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: Montserrat; /* stylelint-disable-line */
   font-size: 0.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -99,7 +99,7 @@
 
 .book-title {
   margin-top: 10px;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab; /* stylelint-disable-line */
   font-size: 1.375rem;
   font-weight: bold;
   font-stretch: normal;
@@ -111,7 +111,7 @@
   width: 5.813rem;
   height: 1.188rem;
   margin: 0.25rem 0.875rem 0 0;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab; /* stylelint-disable-line */
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
@@ -131,14 +131,13 @@
   cursor: pointer;
   background: none;
   color: #4386bf;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab; /* stylelint-disable-line */
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #4386bf;
 }
 
 .buttons {
@@ -155,7 +154,7 @@ svg {
   width: 13.875rem;
   height: 1.5rem;
   margin: 1.813rem 32.75rem 1.188rem 0;
-  font-family: Montserrat;
+  font-family: Montserrat; /* stylelint-disable-line */
   font-size: 1.25rem;
   font-weight: bold;
   font-stretch: normal;
@@ -177,7 +176,7 @@ svg {
   flex-flow: column;
   float: left;
   width: 100%;
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 #form-add > input {
@@ -251,7 +250,7 @@ svg {
 }
 
 .percentage {
-  font-family: Montserrat;
+  font-family: Montserrat; /* stylelint-disable-line */
   font-size: 2rem;
   font-weight: normal;
   font-stretch: normal;
@@ -283,7 +282,7 @@ svg {
   border: none;
   height: 30px;
   width: 100px;
-  margin: 0px auto 0px auto;
+  margin: 0 auto 0 auto;
 }
 
 .chapter-title {
@@ -291,7 +290,7 @@ svg {
   height: 1.125rem;
   margin: 0.063rem 3.625rem 0 3.688rem;
   opacity: 0.5;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab; /* stylelint-disable-line */
   font-size: 0.813rem;
   font-weight: 300;
   font-stretch: normal;
@@ -305,7 +304,7 @@ svg {
   width: 4.688rem;
   height: 1.313rem;
   margin: 0.438rem 6.813rem 0.25rem 3.688rem;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab; /* stylelint-disable-line */
   font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
@@ -327,7 +326,7 @@ svg {
 .Update-progress {
   width: 8.938rem;
   height: 1.125rem;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab; /* stylelint-disable-line */
   font-size: 0.813rem;
   font-weight: 300;
   font-stretch: normal;
@@ -400,7 +399,7 @@ svg {
   .add-button {
     height: 40px;
     width: 130px;
-    margin: 0px auto 0px auto;
+    margin: 0 auto 0 auto;
   }
 
   #form-add > select {
