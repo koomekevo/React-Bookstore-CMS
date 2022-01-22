@@ -1,5 +1,6 @@
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
+const EDIT_BOOK = 'bookStore/books/EDIT_BOOK';
 const MODAL = 'bookStore/books/MODAL';
 const FETCH_LOADING = 'FETCH_LOADING';
 const FETCH_SUCCESS = 'FETCH_SUCCESS';
@@ -51,6 +52,7 @@ export const addBook = (payload) => async (dispatch) => {
       body: JSON.stringify({
         item_id: payload.id,
         title: payload.title,
+        author: payload.author,
         category: payload.category,
       }),
       headers: {
@@ -75,6 +77,11 @@ export const removeBook = (payload) => async (dispatch) => {
   dispatch(fetchPostsRequest());
 };
 
+export const editBook = (payload) => ({
+  type: EDIT_BOOK,
+  payload,
+});
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
@@ -85,6 +92,8 @@ const reducer = (state = initialState, action) => {
       };
     case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.payload);
+    case EDIT_BOOK:
+      return state;
     case FETCH_LOADING:
       return {
         ...state,

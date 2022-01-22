@@ -5,17 +5,19 @@ const Navbar = () => {
     {
       id: 1,
       path: '/',
-      text: 'Books',
+      text: 'BOOKS',
     },
     {
       id: 2,
       path: '/categories',
-      text: 'Categories',
+      text: 'CATEGORIES',
     },
   ];
   return (
     <nav className="navBar">
-      <img src="https://res.cloudinary.com/djjuu1pzp/image/upload/v1642525457/bookstorecmslogo_vvlpzr.png" alt="logo" height="30" width="200" loading="lazy" />
+      <span className="Bookstore-CMS Text-Style-5">
+        Bookstore CMS
+      </span>
       <ul className="navlist">
         {links.map((link) => (
           <li key={link.id}>
